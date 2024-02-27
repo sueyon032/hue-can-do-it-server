@@ -96,6 +96,13 @@
 
     </main>
 
+
+    <?php
+
+    include('./db_conn3.php');
+   
+    ?>
+
     <script src="js/home.js"></script>
 </body>
 
