@@ -62,7 +62,7 @@
 
         <!-- 휴지통 -->
         <div class="trashcanContainer">
-            <img src="images/trashcan.png" class="trashcan">
+            <img src="images/trash_can.png" class="trashcan">
             <div class="tissueContainer">
                 <div class="tissue" id="tissue">
                     <div class="tissue-modal" id="tissueModal">
