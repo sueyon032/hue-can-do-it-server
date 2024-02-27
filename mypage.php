@@ -34,6 +34,10 @@
             <div class="name"><b>suyeon</b></div>
         </div>
 
+        <?php
+            include('db_conn2.php');
+        ?>
+
         <div class="hr-container">
             <hr>
         </div>
