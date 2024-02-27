@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/mission_fail.css">
+
+    <title>휴캔두잇_미션실패</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo gugi-regular">
+            휴캔두잇
+        </div>
+        <nav>
+            <i class="bi bi-house"></i>
+            <i class="bi bi-trash3"></i>
+            <i class="bi bi-person-circle"></i>
+        </nav>
+    </header>
+
+    <main>
+        <img src="images/trashcan.png" class="trashcan">
+
+        <div class="missionfail-container">
+            <!-- 미션 실패 -->
+            <span class="missionfail-text">미션 실패</span>
+            <!-- 휴지파쇄 버튼 -->
+            <button type="submit" id="failBtn" onclick="tissueCrush()">휴지 파쇄</button>
+        </div>
+        
+        <div class="tissue-crush-container">
+            <img src="./images/left_tissue.png" id="left-tissue">
+            <img src="./images/right_tissue.png" id="right-tissue">
+        </div>
+
+    </main>
+
+    <script src="js/mission_fail.js"></script>
+</body>
+
+</html>
