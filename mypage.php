@@ -57,88 +57,38 @@
         </div>
 
         <div id="certificates-item">
+            <div class="cer-box-containerss">
+                <?php
+                include('db_conn2.php');
 
-            <div class="cer-box-container">
-                <div class="cer-box">
-                    <p class="cer-title">수료증</p>
-                    <br>
-                    <p class="cer-content">30일 간의 미션을 수행했습니다</p>
-                    <br>
-                    <p class="cer-target">목표 : 영어 공부하기</p>
-                </div>
+                $sql = "SELECT tissue, main_keyword, sub_keyword FROM user_data";
+                $result = mysqli_query($conn, $sql);
 
-                <div class="cer-box">
-                    <p class="cer-title">수료증</p>
-                    <br>
-                    <p class="cer-content">30일 간의 미션을 수행했습니다</p>
-                    <br>
-                    <p class="cer-target">목표 : 영어 공부하기</p>
-                </div>
+                $count = 0;
 
-                <div class="cer-box">
-                    <p class="cer-title">수료증</p>
-                    <br>
-                    <p class="cer-content">30일 간의 미션을 수행했습니다</p>
-                    <br>
-                    <p class="cer-target">목표 : 영어 공부하기</p>
-                </div>
-            </div>
+                while ($row = mysqli_fetch_assoc($result)) {
+                    if ($row['tissue'] == 30) {
+                        $count++;
 
-            <div class="cer-box-container">
-                <div class="cer-box">
-                    <p class="cer-title">수료증</p>
-                    <br>
-                    <p class="cer-content">30일 간의 미션을 수행했습니다</p>
-                    <br>
-                    <p class="cer-target">목표 : 영어 공부하기</p>
-                </div>
+                        echo '<div class="cer-box">';
+                        echo '<p class="cer-title">수료증</p>';
+                        echo '<br>';
+                        echo '<p class="cer-content">30일 간의 미션을 수행했습니다</p>';
+                        echo '<br>';
+                        echo '<p class="cer-target">목표 : ' . $row['main_keyword'] . ' - ' . $row['sub_keyword'] . '</p>';
+                        echo '</div>';
 
-                <div class="cer-box">
-                    <p class="cer-title">수료증</p>
-                    <br>
-                    <p class="cer-content">30일 간의 미션을 수행했습니다</p>
-                    <br>
-                    <p class="cer-target">목표 : 영어 공부하기</p>
-                </div>
+                        if ($count % 3 == 0) {
+                            echo '<div style="max-width: 1300px; gap: 50px;">';
+                        }
+                    }
+                }
 
-                <div class="cer-box">
-                    <p class="cer-title">수료증</p>
-                    <br>
-                    <p class="cer-content">30일 간의 미션을 수행했습니다</p>
-                    <br>
-                    <p class="cer-target">목표 : 영어 공부하기</p>
-                </div>
-            </div>
-
-            <div class="cer-box-container">
-                <div class="cer-box">
-                    <p class="cer-title">수료증</p>
-                    <br>
-                    <p class="cer-content">30일 간의 미션을 수행했습니다</p>
-                    <br>
-                    <p class="cer-target">목표 : 영어 공부하기</p>
-                </div>
-
-                <div class="cer-box">
-                    <p class="cer-title">수료증</p>
-                    <br>
-                    <p class="cer-content">30일 간의 미션을 수행했습니다</p>
-                    <br>
-                    <p class="cer-target">목표 : 영어 공부하기</p>
-                </div>
-
-                <div class="cer-box">
-                    <p class="cer-title">수료증</p>
-                    <br>
-                    <p class="cer-content">30일 간의 미션을 수행했습니다</p>
-                    <br>
-                    <p class="cer-target">목표 : 영어 공부하기</p>
-                </div>
+                mysqli_close($conn);
+                ?>
             </div>
         </div>
     </main>
-
-    <footer></footer>
 
 </body>
 

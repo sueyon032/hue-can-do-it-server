@@ -59,7 +59,16 @@ hr {
     display: none;
 }
 
-.cer-box-container {
+/* .cer-box-container {
+    max-width: 1300px;
+
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    gap: 50px;
+} */
+
+.cer-box-containerss {
     max-width: 1300px;
 
     margin: 0 auto;
